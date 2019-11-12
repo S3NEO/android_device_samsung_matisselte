@@ -17,14 +17,11 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/samsung/s3ve3gjv/s3ve3gjv-vendor.mk)
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# NFC
-# $(call inherit-product, device/samsung/s3ve3g-common/nfc/pn547/product.mk)
+# Get non-open-source specific aspects
+$(call inherit-product-if-exists, vendor/samsung/matisselte/matisselte-vendor.mk)
 
-# common s3ve3g
-$(call inherit-product, device/samsung/s3ve3g-common/s3ve3g.mk)
+# common matisse
+$(call inherit-product, device/samsung/matisse-common/matisse.mk)

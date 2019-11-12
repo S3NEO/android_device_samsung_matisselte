@@ -13,21 +13,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# inherit from common s3ve3g
-include device/samsung/s3ve3g-common/BoardConfigCommon.mk
+# inherit from common matisse
+include device/samsung/matisse-common/BoardConfigCommon.mk
+
+# Assert
+TARGET_OTA_ASSERT_DEVICE := matisse,matisselte
 
 # Kernel
-TARGET_KERNEL_CONFIG := lineage_s3ve3gjv_defconfig
+TARGET_KERNEL_CONFIG := lineage_matisselte_defconfig
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm8226
-TARGET_LIBINIT_MSM8226_DEFINES_FILE := device/samsung/s3ve3gjv/init/init_s3ve3g.cpp
-
-# NFC
-# include $(COMMON_PATH)/nfc/pn547/board.mk
+TARGET_LIBINIT_MSM8226_DEFINES_FILE := device/samsung/matisselte/init/init_matisse.cpp
 
 # Radio/RIL
 include $(COMMON_PATH)/radio/single/board.mk
 
+# HIDL
+DEVICE_MANIFEST_FILE += device/samsung/matisselte/manifest.xml
+
 # inherit from the proprietary version
--include vendor/samsung/s3ve3gjv/BoardConfigVendor.mk
+-include vendor/samsung/matisselte/BoardConfigVendor.mk
+
