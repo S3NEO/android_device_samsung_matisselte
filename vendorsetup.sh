@@ -1,2 +1,0 @@
-add_lunch_combo lineage_matisselte-eng
-add_lunch_combo lineage_matisselte-userdebug
