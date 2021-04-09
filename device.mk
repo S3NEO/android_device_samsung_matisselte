@@ -25,7 +25,7 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/samsung/matisselte/matisselte-vendor.mk)
+$(call inherit-product, vendor/samsung/matisselte/matisselte-vendor.mk)
 
 # common matisse
 $(call inherit-product, device/samsung/matisse-common/matisse.mk)
