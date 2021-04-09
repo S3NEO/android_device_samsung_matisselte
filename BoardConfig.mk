@@ -19,15 +19,14 @@ include device/samsung/matisse-common/BoardConfigCommon.mk
 # Assert
 TARGET_OTA_ASSERT_DEVICE := matisse,matisselte
 
+# HIDL
+DEVICE_MANIFEST_FILE += device/samsung/matisselte/manifest.xml
+
 # Kernel
 TARGET_KERNEL_CONFIG := lineage_matisselte_defconfig
 
 # Radio/RIL
 include $(COMMON_PATH)/radio/single/board.mk
 
-# HIDL
-DEVICE_MANIFEST_FILE += device/samsung/matisselte/manifest.xml
-
 # inherit from the proprietary version
--include vendor/samsung/matisselte/BoardConfigVendor.mk
-
+include vendor/samsung/matisselte/BoardConfigVendor.mk
