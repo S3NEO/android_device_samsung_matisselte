@@ -22,3 +22,5 @@ $(call inherit-product, device/samsung/matisselte/full_matisselte.mk)
 
 PRODUCT_DEVICE := matisselte
 PRODUCT_NAME := lineage_matisselte
+
+PRODUCT_GMS_CLIENTID_BASE := android-samsung
