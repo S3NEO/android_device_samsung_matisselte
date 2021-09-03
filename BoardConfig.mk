@@ -24,6 +24,7 @@ DEVICE_MANIFEST_FILE += device/samsung/matisselte/manifest.xml
 
 # Kernel
 TARGET_KERNEL_CONFIG := lineage_matisselte_defconfig
+TARGET_KERNEL_RECOVERY_CONFIG := lineage_matisselte_recovery_defconfig
 
 # Radio/RIL
 include $(COMMON_PATH)/radio/single/board.mk
